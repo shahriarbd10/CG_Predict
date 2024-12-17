@@ -1,0 +1,131 @@
+/* General Styles */
+:root {
+    --bg-color: #f9f9f9;
+    --container-bg: #ffffff;
+    --text-color: #333;
+    --button-bg: #6c63ff;
+    --button-hover: #554bdb;
+    --input-bg: #f7f7f7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    background: var(--container-bg);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+h1, p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.02);
+}
+
+input {
+    width: calc(100% - 20px); /* Ensures input fits inside container */
+    max-width: 400px; /* Limits input width */
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    display: block;
+    box-sizing: border-box; /* Includes padding and border in width */
+    font-size: 1em;
+}
+
+.semester-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.semester-options button {
+    flex: 1 0 30%;
+    margin: 5px;
+    padding: 10px 0;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.semester-options button.selected {
+    background-color: var(--button-bg);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --button-bg: #444;
+    --button-hover: #666;
+    --input-bg: #2e2e2e;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG Predict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggleBtn">🌙 Dark Mode</button>
+    </div>
+
+    <!-- Semester Input Section -->
+    <div class="container" id="semesterSection">
+        <h1 class="fade-in">CG Predict</h1>
+        <p>Enter Your Semester Details:</p>
+        <div class="semester-options">
+            <button class="semester-btn" data-value="Spring">Spring</button>
+            <button class="semester-btn" data-value="Summer">Summer</button>
+            <button class="semester-btn" data-value="Fall">Fall</button>
+        </div>
+        <label for="yearInput">Year:</label>
+        <input type="number" id="yearInput" placeholder="Enter Year">
+        <button id="semesterContinueBtn" class="continue-btn">Continue</button>
+    </div>
+
+    <!-- Course Input Section -->
+    <div class="container hidden" id="courseSection">
+        <h1 class="fade-in">CG Predict</h1>
+        <p>Course Information</p>
+        <input type="text" id="courseTitle" placeholder="Course Title">
+        <input type="number" id="courseCredit" placeholder="Course Credit">
+        <input type="number" step="0.01" id="courseGPA" placeholder="Expected GPA">
+        <button id="submitCourseBtn" class="submit-btn">Submit Info</button>
+        <button id="courseContinueBtn" class="continue-btn">Generate Transcript</button>
+    </div>
+
+    <!-- Transcript Section -->
+    <div class="container hidden" id="transcriptSection">
+        <h1 class="fade-in">Your Transcript</h1>
+        <h3 id="semesterDetails"></h3>
+        <table id="transcriptTable">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Credits</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3 id="totalCGPA"></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
