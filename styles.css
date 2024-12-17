@@ -129,3 +129,102 @@ body.dark-mode {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--button-bg); /* Matches theme */
+    color: white;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer strong {
+    color: #FFD700; /* Adds a gold highlight to 'Shahriar' */
+}
+
+/* Responsive Design for Modern Devices */
+
+/* For screens less than 768px (Tablets and Phones) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    input {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .semester-options button {
+        flex: 1 0 45%; /* Two buttons per row */
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* For screens less than 480px (Small Phones) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    input {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .semester-options {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .semester-options button {
+        flex: 1 0 100%;
+    }
+
+    table {
+        font-size: 0.7em;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
+}
